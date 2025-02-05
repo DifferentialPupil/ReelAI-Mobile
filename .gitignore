@@ -1,0 +1,19 @@
+# Environment variables
+.env
+.env.*
+
+# Build artifacts
+build/
+
+# Xcode
+xcuserdata/
+
+# Cursor
+.cursor/*
+.cursorrules
+.cursorignore
+
+# VSCode
+.vscode/*
+.vscode/
+

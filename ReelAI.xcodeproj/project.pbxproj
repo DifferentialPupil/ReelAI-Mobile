@@ -6,13 +6,36 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		6227DADC2D52BC9D00A93C2C /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 6227DADB2D52BC9D00A93C2C /* FirebaseAnalytics */; };
+		6227DADF2D52BDA200A93C2C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 6227DADE2D52BDA200A93C2C /* FirebaseAuth */; };
+		6227DAE12D52BDA800A93C2C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 6227DAE02D52BDA800A93C2C /* FirebaseFirestore */; };
+		6227DAE32D52C48E00A93C2C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6227DAE22D52C48E00A93C2C /* GoogleService-Info.plist */; };
+		6227DAE52D52CC9300A93C2C /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 6227DAE42D52CC9300A93C2C /* FirebaseStorage */; };
+		6227DAEF2D53156B00A93C2C /* FirebaseVertexAI in Frameworks */ = {isa = PBXBuildFile; productRef = 6227DAEE2D53156B00A93C2C /* FirebaseVertexAI */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		6227DAE22D52C48E00A93C2C /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		627D03A62D51C5F400C042F1 /* ReelAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReelAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		627D03B82D51C72C00C042F1 /* Exceptions for "ReelAI" folder in "ReelAI" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 627D03A52D51C5F400C042F1 /* ReelAI */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		627D03A82D51C5F400C042F1 /* ReelAI */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				627D03B82D51C72C00C042F1 /* Exceptions for "ReelAI" folder in "ReelAI" target */,
+			);
 			path = ReelAI;
 			sourceTree = "<group>";
 		};
@@ -23,16 +46,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6227DADC2D52BC9D00A93C2C /* FirebaseAnalytics in Frameworks */,
+				6227DAE52D52CC9300A93C2C /* FirebaseStorage in Frameworks */,
+				6227DAEF2D53156B00A93C2C /* FirebaseVertexAI in Frameworks */,
+				6227DADF2D52BDA200A93C2C /* FirebaseAuth in Frameworks */,
+				6227DAE12D52BDA800A93C2C /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6227DADD2D52BDA200A93C2C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		627D039D2D51C5F400C042F1 = {
 			isa = PBXGroup;
 			children = (
+				6227DAE22D52C48E00A93C2C /* GoogleService-Info.plist */,
 				627D03A82D51C5F400C042F1 /* ReelAI */,
+				6227DADD2D52BDA200A93C2C /* Frameworks */,
 				627D03A72D51C5F400C042F1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,6 +102,11 @@
 			);
 			name = ReelAI;
 			packageProductDependencies = (
+				6227DADB2D52BC9D00A93C2C /* FirebaseAnalytics */,
+				6227DADE2D52BDA200A93C2C /* FirebaseAuth */,
+				6227DAE02D52BDA800A93C2C /* FirebaseFirestore */,
+				6227DAE42D52CC9300A93C2C /* FirebaseStorage */,
+				6227DAEE2D53156B00A93C2C /* FirebaseVertexAI */,
 			);
 			productName = ReelAI;
 			productReference = 627D03A62D51C5F400C042F1 /* ReelAI.app */;
@@ -94,6 +136,9 @@
 			);
 			mainGroup = 627D039D2D51C5F400C042F1;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				62B263102D52B6920082EE7D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 627D03A72D51C5F400C042F1 /* Products */;
 			projectDirPath = "";
@@ -109,6 +154,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6227DAE32D52C48E00A93C2C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +300,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ReelAI/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ReelAI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -264,6 +311,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = GauntletAI.ReelAI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -282,6 +330,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ReelAI/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ReelAI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -292,6 +341,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = GauntletAI.ReelAI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -322,6 +372,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		62B263102D52B6920082EE7D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6227DADB2D52BC9D00A93C2C /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62B263102D52B6920082EE7D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		6227DADE2D52BDA200A93C2C /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62B263102D52B6920082EE7D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		6227DAE02D52BDA800A93C2C /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62B263102D52B6920082EE7D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		6227DAE42D52CC9300A93C2C /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62B263102D52B6920082EE7D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		6227DAEE2D53156B00A93C2C /* FirebaseVertexAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62B263102D52B6920082EE7D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseVertexAI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 627D039E2D51C5F400C042F1 /* Project object */;
 }

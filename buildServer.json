@@ -1,0 +1,19 @@
+{
+	"name": "xcode build server",
+	"version": "0.2",
+	"bspVersion": "2.0",
+	"languages": [
+		"c",
+		"cpp",
+		"objective-c",
+		"objective-cpp",
+		"swift"
+	],
+	"argv": [
+		"/opt/homebrew/bin/xcode-build-server"
+	],
+	"workspace": "/Users/azaldinfreidoon/Documents/Gauntlet AI/ReelAI/ReelAI.xcodeproj/project.xcworkspace",
+	"build_root": "/Users/azaldinfreidoon/Library/Developer/Xcode/DerivedData/ReelAI-emuujjpdypelkiesatxbdfxhmksc",
+	"scheme": "ReelAI",
+	"kind": "xcode"
+}
