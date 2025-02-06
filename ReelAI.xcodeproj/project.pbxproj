@@ -13,6 +13,7 @@
 		6227DAE32D52C48E00A93C2C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6227DAE22D52C48E00A93C2C /* GoogleService-Info.plist */; };
 		6227DAE52D52CC9300A93C2C /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 6227DAE42D52CC9300A93C2C /* FirebaseStorage */; };
 		6227DAEF2D53156B00A93C2C /* FirebaseVertexAI in Frameworks */ = {isa = PBXBuildFile; productRef = 6227DAEE2D53156B00A93C2C /* FirebaseVertexAI */; };
+		6227DAF32D5423C900A93C2C /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 6227DAF22D5423C900A93C2C /* FirebaseFunctions */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 				6227DADC2D52BC9D00A93C2C /* FirebaseAnalytics in Frameworks */,
 				6227DAE52D52CC9300A93C2C /* FirebaseStorage in Frameworks */,
 				6227DAEF2D53156B00A93C2C /* FirebaseVertexAI in Frameworks */,
+				6227DAF32D5423C900A93C2C /* FirebaseFunctions in Frameworks */,
 				6227DADF2D52BDA200A93C2C /* FirebaseAuth in Frameworks */,
 				6227DAE12D52BDA800A93C2C /* FirebaseFirestore in Frameworks */,
 			);
@@ -107,6 +109,7 @@
 				6227DAE02D52BDA800A93C2C /* FirebaseFirestore */,
 				6227DAE42D52CC9300A93C2C /* FirebaseStorage */,
 				6227DAEE2D53156B00A93C2C /* FirebaseVertexAI */,
+				6227DAF22D5423C900A93C2C /* FirebaseFunctions */,
 			);
 			productName = ReelAI;
 			productReference = 627D03A62D51C5F400C042F1 /* ReelAI.app */;
@@ -409,6 +412,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 62B263102D52B6920082EE7D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseVertexAI;
+		};
+		6227DAF22D5423C900A93C2C /* FirebaseFunctions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62B263102D52B6920082EE7D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFunctions;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

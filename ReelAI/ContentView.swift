@@ -14,6 +14,8 @@ struct ContentView: View {
     @StateObject private var storageService = StorageService()
     @State private var dragOffset: CGFloat = 0
     @State private var currentVideoIndex: Int = 0
+    @State private var showingProfile = false
+    @State private var showingVideoGeneration = false
     
     var body: some View {
         ZStack {
@@ -54,16 +56,32 @@ struct ContentView: View {
             }
             
             // Profile Button Overlay
-            Icons()
+            Icons(
+                onProfileTap: { showingProfile = true },
+                onVideoTap: { showingVideoGeneration = true },
+                onHeartTap: { print("Heart button tapped") }
+            )
         }
         .gesture(
             DragGesture()
                 .onEnded { value in
                     let verticalMovement = value.translation.height
+                    let horizontalMovement = value.translation.width
+                    
+                    // Vertical swipes
                     if verticalMovement > 50 {
                         print("Swiped down with offset: \(verticalMovement)")
                     } else if verticalMovement < -50 {
                         print("Swiped up with offset: \(verticalMovement)")
+                    }
+                    
+                    // Horizontal swipes
+                    if horizontalMovement > 50 {
+                        print("Swiped right with offset: \(horizontalMovement)")
+                        
+                    } else if horizontalMovement < -50 {
+                        print("Swiped left with offset: \(horizontalMovement)")
+                        showingProfile = true
                     }
                 }
         )
@@ -71,6 +89,12 @@ struct ContentView: View {
             print("Fetching videos...")
             await storageService.fetchVideos()
             print("Done fetching videos.")
+        }
+        .sheet(isPresented: $showingProfile) {
+            ProfileView()
+        }
+        .fullScreenCover(isPresented: $showingVideoGeneration) {
+            VideoGenerationView()
         }
     }
 }
@@ -223,11 +247,15 @@ struct CustomVideoPlayer: UIViewControllerRepresentable {
 }
 
 struct Icons: View {
+    let onProfileTap: () -> Void
+    let onVideoTap: () -> Void
+    let onHeartTap: () -> Void
+    
     var body: some View {
         VStack(spacing: 20) {
-            Icon(printStatement: "Profile button tapped", imageName: "person.circle.fill")
-            Icon(printStatement: "Video button tapped", imageName: "play.rectangle.fill")
-            Icon(printStatement: "Heart button tapped", imageName: "heart.fill")
+            Icon(action: onProfileTap, imageName: "person.circle.fill")
+            Icon(action: onVideoTap, imageName: "play.rectangle.fill")
+            Icon(action: onHeartTap, imageName: "heart.fill")
             Spacer()
         }
         .padding(.top, 60)
@@ -235,15 +263,13 @@ struct Icons: View {
 }
 
 struct Icon: View {
-    let printStatement: String
+    let action: () -> Void
     let imageName: String
     
     var body: some View {
         HStack {
             Spacer()
-            Button(action: {
-                print(printStatement)
-            }) {
+            Button(action: action) {
                 Image(systemName: imageName)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
